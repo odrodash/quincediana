@@ -105,7 +105,7 @@
 
             map.on("load", function () {
             /* Image: An image is loaded and added to the map. */
-              map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
+              map.loadImage("https://res.cloudinary.com/dmuryw7rj/image/upload/v1583853429/quincediana/location4_qrdujg.png", function(error, image) {
                 if (error) throw error;
                   map.addImage("custom-marker", image);
                   /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
@@ -135,6 +135,7 @@
                   });
               });
             });
+            map.addControl(new mapboxgl.NavigationControl());
           </script>
         </div>
       </div>
