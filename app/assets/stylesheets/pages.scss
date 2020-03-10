@@ -1,0 +1,37 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* Style the header with a grey background and some padding */
+.bntconfirmar{
+  margin: 0 auto;
+  width:auto;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+.texto {
+  font-size:3rem;
+  background-color:#fff;
+  color:black;
+}
+
+
+.navbar {
+  background-color:black;
+}
+
+.piedefoto p{
+  color:black;
+  font-size:25px;
+  margin-bottom:-25px;
+  padding:0px;
+}
+
+.tarjeta{
+  height: 400px;
+  margin:20px 0px;
+  .textofecha{
+    color:white;
+    font-family: 'Anton', sans-serif;
+    font-size:40px;
+  }
+}
