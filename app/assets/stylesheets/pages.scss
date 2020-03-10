@@ -4,10 +4,11 @@
 /* Style the header with a grey background and some padding */
 
 .texto {
-  font-size:3rem;
   background-color:#fff;
   color:#F4A788;
   text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+  font-size:45px;
+  font-family: 'Parisienne', cursive;
 
 }
 
@@ -17,20 +18,17 @@
   height:50px;
 }
 
-.iniciarsesion{
+.iniciarsesion {
   font-family: arial, sans-serif;
   background-color:black;
   color:#F4A788 !important;
   border:1px solid #F4A788;
   border-radius:5px;
   font-size:20px !important;
-  padding:5px 10px !important;
+  padding:10px 20px !important;
 }
 .navbar {
   background-color:black;
-  a{
-    font-size:35px;
-  }
   .custom-toggler.navbar-toggler {
     border-color: #F4A788;
   }
@@ -38,7 +36,80 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244, 167, 136, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 }
+.menunavbar {
+  font-size:35px;
+  font-family: 'Parisienne', cursive;
+}
+//dropdowm navbar menu
+/* Links inside the navbar */
+// .navbar a {
+//   float: left;
+//   font-size: 16px;
+//   color: white;
+//   text-align: center;
+//   padding: 14px 16px;
+//   text-decoration: none;
+// }
 
+/* The dropdown container */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+// .dropdown2 .dropbtn {
+//   font-size: 16px;
+//   border: none;
+//   outline: none;
+//   color: white;
+//   padding: 14px 16px;
+//   background-color: inherit;
+//   font-family: inherit; /* Important for vertical align on mobile phones */
+//   margin: 0; /* Important for vertical align on mobile phones */
+// }
+
+/* Add a red background color to navbar links on hover */
+// .navbar a:hover, .dropdown2:hover .dropbtn {
+//   background-color: red;
+// }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1000;
+  padding:15px;
+  border:1px solid #F4A788;
+  border-radius:5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content {
+  display: block;
+}
+
+
+
+//end navbar
 
 .piedefoto p{
   color:black;
@@ -50,7 +121,7 @@
 .tarjeta{
   margin:20px 0px;
   .textofecha{
-    color:#F4A788;
+    color:#FFE5FF;
     font-family: 'Anton', sans-serif;
     font-size:40px;
     text-shadow: 0px 1px 1px rgba(0,0,0,0.5);

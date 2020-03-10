@@ -77,12 +77,12 @@
   <!--/.Carousel Wrapper-->
 
   <div class="text-center m-5">
-    <button class="confetti-button" id="button" href="#" target="_blank">Confirmar Asistencia</button>
+    <button class="confetti-button" id="button5" href="#" target="_blank">Confirmar Asistencia</button>
   </div>
   <script>
-    let button = document.getElementById("button");
+    var button3 = document.getElementById("button5");
 
-    button.addEventListener('click', (e) => {
+    button3.addEventListener('click', (e) => {
         e.preventDefault;
         e.target.classList.toggle("animate");
 
@@ -101,7 +101,7 @@
     <div class="col-sm-12 col-md-12 mx-0 px-0 my-5">
       <div class="row">
         <div class="col-12 col-md-4" style="">
-          <p class="textofecha">En el salon de eventos IMPERIA, ubicado en: <i class="fas fa-map-marker-alt"></i>Villa 1ro de Mayo, Calle 14 Este # 17</p>
+          <p class="textofecha">En el salon de eventos IMPERIA, ubicado en: Villa 1ro de Mayo, Calle 14 Este # 17</p>
         </div>
         <div class="col-12 col-md-8">
           <div id='map' style='width: 100%; height: 500px;'></div>
@@ -117,7 +117,7 @@
             map.on("load", function () {
             /* Image: An image is loaded and added to the map. */
               map.loadImage("https://res.cloudinary.com/dmuryw7rj/image/upload/v1583853429/quincediana/location4_qrdujg.png", function(error, image) {
-                if (error) throw error;
+                  if (error) throw error;
                   map.addImage("custom-marker", image);
                   /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
                   map.addLayer({
@@ -126,18 +126,12 @@
                     /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
                     source: {
                       type: "geojson",
-                      data: {
-                        type: 'FeatureCollection',
-                        features: [
-                          {
-                            type: 'Feature',
-                            properties: {},
-                            geometry: {
-                              type: "Point",
-                              coordinates: [-63.1341, -17.8006]
-                            }
-                          }
-                        ]
+                      data: { type: 'FeatureCollection',
+                            features: [{
+                              type: 'Feature',
+                              properties: {},
+                              geometry: { type: "Point", coordinates: [-63.1341, -17.8006] }
+                            }]
                       }
                     },
                     layout: {

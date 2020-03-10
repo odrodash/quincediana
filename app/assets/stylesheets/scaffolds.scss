@@ -1,7 +1,38 @@
 body {
   background: rgb(138,0,0);
   background: linear-gradient(0deg, rgba(138,0,0,1) 0%, rgba(255,183,149,1) 100%);
-  font-family: 'Parisienne', cursive;
+  font-family: arial, sans-serif;
 }
 
 
+#footer {
+  background-color:black;
+  color:#FF00A5;
+  width:100%;
+  font-size:60px;
+  padding:20px auto;
+  margin-bottom:0px;
+  .elements-footer{
+    padding: 0 30%
+  }
+  h4 {
+    color:#F4A788 !important;
+    font-family: 'Parisienne', cursive;
+    font-size:25px;
+    padding-top:15px;
+  }
+  a {
+    text-decoration:none;
+    color:#F4A788;
+    opacity:0.6;
+  }
+  a:hover {
+    color:#F4A788;
+  }
+}
+
+.textfooter{
+  color:gray;
+  font-size:12px;
+  text-align: center;
+}
