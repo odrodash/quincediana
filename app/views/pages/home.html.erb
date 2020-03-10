@@ -76,10 +76,21 @@
   </div>
   <!--/.Carousel Wrapper-->
 
-  <div class="bntconfirmar">
-    <a class="btn btn-outline-light my-3" href="#" target="_blank">Confirmar Asistencia</a>
+  <div class="text-center m-5">
+    <button class="confetti-button" id="button" href="#" target="_blank">Confirmar Asistencia</button>
   </div>
+  <script>
+    let button = document.getElementById("button");
 
+    button.addEventListener('click', (e) => {
+        e.preventDefault;
+        e.target.classList.toggle("animate");
+
+        setTimeout(function () {
+            e.target.classList.remove('animate');
+        }, 700);
+    }, false);
+  </script>
   <div class="row tarjeta">
     <div class="col-sm-12 col-md-12 mx-0 px-0 my-3">
       <div class="d-flex align-items-start">

@@ -2,23 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 /* Style the header with a grey background and some padding */
-.bntconfirmar{
-  margin: 0 auto;
-  width:auto;
-  font-family: 'Anton', sans-serif;
-  text-align: center;
-}
+
 .texto {
   font-size:3rem;
   background-color:#fff;
-  color:black;
+  color:#F4A788;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+
 }
 
+.avatars{
+  border-radius: 50%;
+  width:50px;
+  height:50px;
+}
 
+.iniciarsesion{
+  font-family: arial, sans-serif;
+  background-color:black;
+  color:#F4A788 !important;
+  border:1px solid #F4A788;
+  border-radius:5px;
+  font-size:20px !important;
+  padding:5px 10px !important;
+}
 .navbar {
   background-color:black;
   a{
     font-size:35px;
+  }
+  .custom-toggler.navbar-toggler {
+    border-color: #F4A788;
+  }
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244, 167, 136, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 }
 
@@ -33,9 +50,10 @@
 .tarjeta{
   margin:20px 0px;
   .textofecha{
-    color:white;
+    color:#F4A788;
     font-family: 'Anton', sans-serif;
     font-size:40px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
   }
 }
 
@@ -44,4 +62,174 @@
   color:#AC00B0;
   font-size:80px;
   text-shadow: 0 0 5px #FF0000;
+}
+
+//button bubble effect
+.confetti-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 40px;
+    appearance: none;
+    background-color: #FF00A5;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 215, 250, 0.5);
+    text-transform: uppercase;
+}
+
+.confetti-button:focus {
+    outline: 0;
+}
+
+.confetti-button:before, .confetti-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.confetti-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #FF00A5 20%, transparent 30%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #FF00A5 15%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%);
+    background-size: 10% 10%,
+    20% 20%,
+    15% 15%,
+    20% 20%,
+    18% 18%,
+    10% 10%,
+    15% 15%,
+    10% 10%,
+    18% 18%;
+}
+
+.confetti-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #FF00A5 15%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%),
+    radial-gradient(circle, #FF00A5 20%, transparent 20%);
+    background-size: 15% 15%,
+    20% 20%,
+    18% 18%,
+    20% 20%,
+    15% 15%,
+    10% 10%,
+    20% 20%;
+}
+
+.confetti-button:active {
+    transform: scale(0.9);
+    background-color: #FF2BB4;
+    box-shadow: 0 2px 25px rgba(255, 215, 52, 0.2);
+}
+
+.confetti-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.confetti-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%,
+        10% 90%,
+        10% 90%,
+        15% 90%,
+        25% 90%,
+        25% 90%,
+        40% 90%,
+        55% 90%,
+        70% 90%;
+    }
+    50% {
+        background-position: 0 80%,
+        0 20%,
+        10% 40%,
+        20% 0,
+        30% 30%,
+        22% 50%,
+        50% 50%,
+        65% 20%,
+        90% 30%;
+    }
+    100% {
+        background-position: 0 70%,
+        0 10%,
+        10% 30%,
+        20% -10%,
+        30% 20%,
+        22% 40%,
+        50% 40%,
+        65% 10%,
+        90% 20%;
+        background-size: 0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%,
+        30% 10%,
+        55% -10%,
+        70% -10%,
+        85% -10%,
+        70% -10%,
+        70% 0;
+    }
+    50% {
+        background-position: 0 80%,
+        20% 80%,
+        45% 60%,
+        60% 100%,
+        75% 70%,
+        95% 60%,
+        105% 0;
+    }
+    100% {
+        background-position: 0 90%,
+        20% 90%,
+        45% 70%,
+        60% 110%,
+        75% 80%,
+        95% 70%,
+        110% 10%;
+        background-size: 0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0;
+    }
 }
