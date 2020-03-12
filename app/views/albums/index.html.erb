@@ -1,31 +1,33 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
 
-<h1>Albums</h1>
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <h2>Photos</h2>
 
-  <tbody>
-    <% @albums.each do |album| %>
-      <tr>
-        <td><%= album.title %></td>
-        <td><%= album.description %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table>
+      <thead>
+        <tr>
+          <th>Mis 15 años, Dianara</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @albums.each do |album| %>
+          <tr>
+            <td><%= album.title %></td>
+            <td><%= album.description %></td>
+            <td><%= link_to 'Ver', album %></td>
+            <% if current_user && current_user.admin? %>
+              <td><%= link_to 'Editar', edit_album_path(album) %></td>
+              <td><%= link_to 'Eliminar', album, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<%= link_to 'New Album', new_album_path %>
-</div>
+    <br>
+
+    <%= link_to 'Nuevo Album', new_album_path %>
+
+

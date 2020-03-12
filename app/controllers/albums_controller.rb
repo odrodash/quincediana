@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: :index
-
+  helper_method :resource_name, :resource, :devise_mapping, :resource_class
   # GET /albums
   def index
     @albums = Album.all
@@ -47,6 +47,23 @@ class AlbumsController < ApplicationController
   end
 
   private
+
+    def resource_name
+      :user
+    end
+
+    def resource
+      @resource ||= User.new
+    end
+
+    def resource_class
+      User
+    end
+
+    def devise_mapping
+      @devise_mapping ||= Devise.mappings[:user]
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_album
       @album = Album.find(params[:id])
